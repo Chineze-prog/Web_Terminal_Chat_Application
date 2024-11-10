@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Discordn't</title>
+    <style>
+      #chat { 
+        display:none; 
+      }
+      #theTable {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      #theTable, #theTable th, #theTable td {
+        border: 1px solid black;
+      } 
+      #theTable th, #theTable td {
+        padding: 8px;
+        text-align: left;
+      } 
+    </style>
+  </head>
+  
+  <body onload = "fetchMessages()">
+    <h1>Welcome to Discordn't Chat App</h1>
+    <div id = "login">
+      <label for="username">Enter Username:</label>
+      <input id = "username" type = "text" placeholder = "">
+      <button id = "loginButton" onClick = "login()">Login</button>
+    </div>
+    <div id = "chat">
+      <label for="newMessage">Enter message here:</label>
+      <input id = "newMessage" type = "text" placeholder = ""> 
+      <button onClick = "postMessage()">Send</button>
+      <button onClick = "logout()">Logout</button>
+      <h1></h1>
+      <h3>All the messages you have missed since you last logged out:</h3>
+      <div id = "messages">
+        <table id = "theTable">
+          <thead>
+            <tr>
+              <th>Timestamp</th>
+              <th>Username</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script src = script.js></script>
+  </body>
+</html>
